@@ -92,6 +92,14 @@ ul ul li {
   border-left: none;
 }
 
+.black {
+  background: #000;
+}
+
+.black h1, .black h2 {
+  color: #fff;
+}
+
 blockquote p {
   background: #f9f9f9;
   border-left: 10px solid #ccc;

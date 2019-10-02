@@ -19,13 +19,13 @@ class: middle, title-slide
 
 class: center, middle
 
-# Organisational structure is changing
+# The math of organizations
 
 ---
 
 class: center, middle
 
-# Teams are getting smaller
+# Adding people to teams often makes them slower
 
 .fourty[![](images/connections.jpg)]
 
@@ -33,22 +33,19 @@ class: center, middle
 
 class: center, middle
 
-# They are embedding the skills they need
+### "Every dependency doubles your chance of being delayed or late"
 
 .seventy[![](images/dependencies.png)]
 
 [from Troy Magennis](https://youtu.be/VDrYctVfRzw?t=1133)
 
-???
-"Every dependency doubles your chance of being delayed or late" -- Troy Magennis
-
 ---
 
 class: center, middle
 
-# They are functioning autonomously
+# Hierarchy is bad for good ideas
 
-## 0.85 x 0.85 x 0.85 x 0.85 x 0.85 = .44
+## 0.85 x 0.85 x 0.85 x 0.85 x 0.85 = 0.44
 
 >So, 85% of the people in this organization would individually, if they ever heard about it, support the President's idea. But when the machine manufacturing it is a hierarchy, it has less than a fifty-fifty shot at success. <cite>Kent Aitken</cite>
 
@@ -56,457 +53,132 @@ class: center, middle
 
 class: center, middle
 
-# Embracing the math: The product team is the unit of delivery
+# Embracing the math: delivery teams
+* small: ~4-7 people
+* multidisciplinary: embed your dependecies in the team
+* autonomous: delegate decision making close to the problem
+
+---
+
+class: center, middle, black
+
+# This is how we work at CDS
 
 ---
 
 class: center, middle
 
-# Basic math
+# Our delivery work is still part of a larger goal
 
->A complex system that works is invariably found to have evolved from a simple system that worked. A complex system designed from scratch never works and cannot be patched up to make it work. You have to start over, beginning with a working simple system.<cite>John Gall</cite>
+.fiftyfive[![](images/gubbins.png)]
 
----
-
-
-Jeff Bezos turned Amazon into a network Big Mandate went something along these lines:
-
-.seventy[![](images/white-network.png)]
+[The gubbins of government](https://youtu.be/02__3UTqXmU)
 
 ---
 
+class: center, middle, black
 
-1) All teams will henceforth expose their data and functionality through service interfaces.
-
-2) Teams must communicate with each other through these interfaces.
-
-3) There will be no other form of interprocess communication allowed: no direct linking, no direct reads of another team's data store, no shared-memory model, no back-doors whatsoever. The only communication allowed is via service interface calls over the network.
-
-4) It doesn't matter what technology they use. HTTP, Corba, Pubsub, custom protocols -- doesn't matter. Bezos doesn't care.
-
-5) All service interfaces, without exception, must be designed from the ground up to be externalizable. That is to say, the team must plan and design to be able to expose the interface to developers in the outside world. No exceptions.
-
-6) Anyone who doesn't do this will be fired.
-
-7) Thank you; have a nice day!
-
-
-class: center, middle
-
-# The team is the unit of delivery
-
-* Agile/Iterative development
-* User/Human-centered Design
-* Devops
-* Continuous Delivery
-
-But there is a common thread that runs through them...
----
-
-class: center, middle
-
-### All the buzzwords!
-
-* Agile/Iterative development
-* User/Human-centered Design
-* Devops
-* Continuous Delivery
-
-But there is a common thread that runs through them...
----
-
-class: center, middle
-
-## User/Human-centered Design
-
-><strong>Evaluating designs with users</strong> and improving them based on their feedback <strong>provides an effective means of minimizing the risk</strong> of a system not meeting user or organizational needs <cite>ISO 9241-210:2010</cite>
+# So does EA@CDS look like?
 
 ---
 
 class: center, middle
 
-## Agile/Iterative development
+# Bottom up enterprise archtecture
+.seventy[![](images/fractal.jpg)]
 
-><strong>Iteration should be used to progressively eliminate uncertainty</strong> during the development of interactive systems. Iteration implies that descriptions, specifications and prototypes are revised and refined when new information is obtained <strong>in order to minimize the risk</strong> of the system under development failing to meet user requirements. <cite>ISO 9241-210:2010</cite>
+---
+class: center, middle
+
+## What properties should our systems have?
+(Then choose your tech accordingly)
+
+---
+
+class: center, middle, black
+
+# Composable: everything should have an API
+
+.fourtyfive[![](images/white-network.png)]
 
 ---
 
 class: center, middle
 
-## Continuous Delivery
+# Safe: not full of "footguns"
 
-.fourty[![gds](./images/gds_reduce_risk.png)]
-
----
-
-class: center, middle
-
-## Devops
-
-><strong>Lowering risk of change</strong> with tools and culture<cite>John Allspaw</cite>
+.seventy[![](images/sawstop.jpg)]
 
 ---
 
 class: center, middle
 
-### Process tools to reduce project risk
-* User/Human-centered Design
-* Agile/Iterative development
-* Devops
-* Continuous Delivery
-
-### Technological tools to reduce risk
-* React
-* GraphQL
-* Kubernetes/Docker/Istio
-* ...
+#### Small: make future change easy
 
 ---
 
-class: middle, center
-## We want risk reduction baked in
+class: center, middle
 
-.thirty[![](images/stack.svg)]
-
----
-
-<div id="graph"></div>
+# Observable: logs/metrics are feedback
 
 ---
 
-class: middle, center
-background-image: url(images/react-values.png)
+class: center, middle
 
-# .ten[![react logo](images/react_logo.svg)]
+# Automation friendly
+
+---
+
+class: center, middle
+
+# An example: TBS Infobase!
 
 ---
 
 class: middle, center
 
-## Why React?
-
-* Lets us build highly interactive _applications_ on the "Open Web Platform"
-* New model for safely generating web User Interface (UI)
+background-image: url(images/infobase.png)
 
 ---
 
-class: middle, center, codebg
-background-image: url(images/react-vs-xss-jsx.png)
-
----
-
-class: middle, center, codebg
-background-image: url(images/xss-output.png)
-
----
-class: center, middle
-
-### We changed the tools so that they safely handle inputs by default
-
----
 class: middle, center
-background-image: url(images/graphql-values.png)
 
-# .ten[![GraphQL logo](images/graphql_logo.svg)]
+background-image: url(images/infobase-graphql.png)
+
+---
+
+class: middle, center
+
+background-image: url(images/infobase-schema.png)
 
 ---
 
 class: center, middle
 
-# GraphQL
+# EA is still "a thing": cross service, across the org
 
-* Mobile first for API development
-* Single round trip data fetching
-* Best of breed input validation
-* Supports automation and observability
-* Implementations in C#/.NET, Java, JavaScript, PHP, Python, Ruby...
-
----
-
-class: middle, center, codebg
-background-image: url(images/rest-vs-graphql.png)
+* Building missing libraries, services & tools
+* Automated analysis
+* Security scanning
+* Extracting common code
+* Deduplication
+* Surfacing data for teams
+* Create evolutionary pressure: Chaos monkey
+* More...
 
 ---
 
-class: middle, center, codebg
-background-image: url(images/rest-vs-graphql-output.png)
+class: center, middle, black
 
----
+# The future of EA isn't cathedral building, it's gardening.
+# Come get your hands dirty with us.
+.ten[![](images/cds-logo-en-fr-short.svg)]
 
-class: middle, center
-background-image: url(images/npm-values.png)
-
-# .ten[![js logo](images/npm-logo.svg)]
-
----
-
-class: center, middle
-
-### npm package manager
-
-* main package manager for the JavaScript ecosystem
-* vulnerability scanning by default every time a dependency is installed, worldwide
-
----
-
-class: middle, left
-
-```bash
-$ npm install graphql
-+ graphql@14.1.1
-added 2 packages from 1 contributor and audited 402 packages in 3.521s
-found 0 vulnerabilities
-
-```
----
-
-class: middle, center
-background-image: url(images/javascript-values.png)
-
-# .ten[![js logo](images/js_logo.svg)]
-
----
-
-class: center, middle
-
-# JavaScript
-
-* One language across the stack: APIs, desktop apps, mobile apps
-* Injection protection is part of the language
-
----
-
-class: center, middle
-
-.eighty[![](images/template-strings.png)]
-
----
-
-class: middle, center, codebg
-background-image: url(images/injection-protection.png)
-
----
-
-class: left
-
-### Tagged Template literals in the wild: node-mssql
-
-```javascript
-const sql = require('mssql')
-async () => {
-	await sql.connect('mssql://username:password@localhost/database')
-	const result = await sql.query`select * from mytable where id = ${value}`
-	console.dir(result)
-}
-```
-
----
-
-class: left
-
-### Tagged Template literals in the wild: arangojs
-
-```javascript
-import { Database, aql } from "arangojs"
-const db = new Database()
-(async () => {
-  const now = Date.now()
-  const cursor = await db.query(aql`RETURN ${now}`)
-  const result = await cursor.next()
-  console.log(result)
-})()
-
-```
-
----
-
-class: middle, center
-background-image: url(images/kubernetes-values.png)
-
-# .ten[![k8s logo](images/kubernetes-logo.svg)]
-
----
-
-class: middle, center
-
-# Why Kubernetes?
-
-* Minimize cloud vendor lock-in
-* Combines with Istio and Docker to create robust, scalable, observable systems
-
----
-
-class: middle, center
-
-.seventy[![](images/service-topology.png)]
-
----
-
-class: middle, center
-
-## Final thoughts
-
-* No silver bullets: If this wasn't hard it would be fixed already.
-* There are new tools that have learned from the past. Find them! Use them!
-* When risk reduction is built into both tools & process, safety and speed are not in opposition.
 
     </textarea>
     <script src="js/remark.min.js"></script>
     <script>
       let slideshow = remark.create({ ratio: '16:9' })
-    </script>
-    <script>
-      var data = [
-        ['Observability', 'Kubernetes', 100, 100],
-        ['Observability', 'Istio', 100, 100],
-        ['Security', 'GraphQL', 100, 100],
-        ['Security', 'Flux', 100, 100],
-        ['Determinism', 'Flux', 100, 100],
-        ['Determinism', 'Emotion', 100, 100],
-        ['Determinism', 'React', 100, 100],
-        ['Determinism', 'Kubernetes', 100, 100],
-        ['Developer Velocity', 'Flux', 100, 100],
-        ['Observability', 'Flux', 100, 100],
-        ['Observability', 'Google Cloud', 100, 100],
-        ['Security', 'Docker', 100, 100],
-        ['Security', 'React', 100, 100],
-        ['Security', 'Istio', 100, 100],
-        ['Security', 'npm', 100, 100],
-        ['Observability', 'GraphQL', 100, 100],
-        ['Robustness', 'Kubernetes', 100, 100],
-        ['Robustness', 'Istio', 100, 100],
-        ['Robustness', 'Progressive Web App', 100, 100],
-        ['Mobile friendly', 'Progressive Web App', 100, 100],
-        ['Mobile friendly', 'GraphQL', 100, 100],
-        ['Automation friendly', 'GraphQL', 100, 100],
-        ['Automation friendly', 'Github', 100, 100],
-        ['Automation friendly', 'Kubernetes', 100, 100],
-        ['Automation friendly', 'Sealed Secrets', 100, 100],
-        ['Scalability', 'Kubernetes', 100, 100],
-        ['Scalability', 'Docker', 100, 100],
-        ['Scalability', 'Microservices', 100, 100],
-        ['Scalability', 'ArangoDB', 100, 100],
-        ['Scalability', 'Google Cloud', 100, 100],
-        ['Performance', 'Kubernetes', 100, 100],
-        ['Performance', 'ArangoDB', 100, 100],
-        ['Performance', 'Emotion', 100, 100],
-        ['Performance', 'Google Cloud', 100, 100],
-        ['Extensible', 'Kubernetes', 100, 100],
-        ['Developer Velocity', 'React', 100, 100],
-        ['Developer Velocity', 'GraphQL', 100, 100],
-        ['Developer Velocity', 'ArangoDB', 100, 100],
-        ['Developer Velocity', 'Github', 100, 100],
-        ['Developer Velocity', 'Google Cloud', 100, 100],
-        ['Developer Velocity', 'Javascript', 100, 100],
-        ['Developer Velocity', 'Emotion', 100, 100],
-        ['Developer Velocity', 'npm', 100, 100],
-        ['Cloud Native', 'Microservices', 100, 100],
-        ['Cloud Native', 'Docker', 100, 100],
-        ['Cloud Native', 'Kubernetes', 100, 100],
-        ['Composability', 'React', 100, 100],
-        ['Composability', 'GraphQL', 100, 100],
-        ['Composability', 'Docker', 100, 100],
-        ['Composability', 'Microservices', 100, 100],
-        ['Composability', 'Emotion', 100, 100],
-        ['Security', 'Javascript', 100, 100],
-        ['Security', 'Google Cloud', 100, 100],
-        ['Security', 'Sealed Secrets', 100, 100],
-        ['Maintainability', 'Docker', 100, 100],
-        ['Maintainability', 'React', 100, 100],
-        ['Maintainability', 'Microservices', 100, 100],
-        ['Maintainability', 'Emotion', 100, 100],
-        ['Accessibility', 'React', 100, 100],
-        ['Accessibility', 'Reach Router', 100, 100],
-        ['Testability', 'React', 100, 100],
-        ['Testability', 'Jest', 100, 100],
-        ['Testability', 'GraphQL', 100, 100],
-        ['Reproducibility', 'Flux', 100, 100],
-        ['Reproducibility', 'Github', 100, 100],
-        ['Reproducibility', 'Docker', 100, 100],
-        ['Reproducibility', 'Sealed Secrets', 100, 100],
-        ['High Leverage', 'Javascript', 100, 100],
-        ['High Leverage', 'ArangoDB', 100, 100],
-        ['High Leverage', 'Kubernetes', 100, 100],
-        ['High Leverage', 'Microservices', 100, 100],
-        ['High Leverage', 'Emotion', 100, 100],
-        ['High Leverage', 'Docker', 100, 100],
-        ['High Leverage', 'GraphQL', 100, 100],
-        ['High Leverage', 'React', 100, 100],
-        ['High Leverage', 'Jest', 100, 100],
-        ['Portability', 'Kubernetes', 100, 100],
-        ['Portability', 'Docker', 100, 100],
-      ]
-
-      var color = {
-        Security: '#3366CC',
-        Observability: '#DC3912',
-        'Developer Velocity': '#FF9900',
-        Robustness: '#109618',
-        'Cloud Native': '#bbc8ca',
-        Performance: '#8ab9b5',
-        Composability: '#e76f51',
-        Extensible: '#de639a',
-        Flexibility: '#5b9279',
-        Scalability: '#704e2e',
-        Maintainability: '#931f1d',
-        'High Leverage': '#273c2c',
-        Reproducibility: '#531cb3',
-        Accessibility: '#944bbb',
-        Portability: '#cbaa49',
-        Testability: '#a2999e',
-        Determinism: '#0d3b66',
-        'Mobile friendly': '#119da4',
-        'Automation friendly': '#7fd1b9',
-      }
-
-      var svg = d3
-        .selectAll('#graph')
-        .append('svg')
-        .attr('width', 960)
-        .attr('height', 800)
-      var g = svg.append('g').attr('transform', 'translate(200,50)')
-
-      var bp = viz
-        .bP()
-        .data(data)
-        .min(12)
-        .pad(4)
-        .height(600)
-        .width(500)
-        .barSize(35)
-        .fill(d => color[d.primary])
-
-      g.call(bp)
-
-      g.selectAll('.mainBars')
-        .on('mouseover', mouseover)
-        .on('mouseout', mouseout)
-
-      g.selectAll('.mainBars')
-        .append('text')
-        .attr('class', 'label')
-        .attr('x', d => (d.part == 'primary' ? -30 : 30))
-        .attr('y', d => +6)
-        .text(d => d.key)
-        .attr('text-anchor', d => (d.part == 'primary' ? 'end' : 'start'))
-
-      function mouseover(d) {
-        bp.mouseover(d)
-        g.selectAll('.mainBars')
-          .select('.perc')
-          .text(function(d) {
-            return d3.format('0.0%')(d.percent)
-          })
-      }
-      function mouseout(d) {
-        bp.mouseout(d)
-        g.selectAll('.mainBars')
-          .select('.perc')
-          .text(function(d) {
-            return d3.format('0.0%')(d.percent)
-          })
-      }
-      d3.select(self.frameElement).style('height', '800px')
     </script>
   </body>
 </html>
